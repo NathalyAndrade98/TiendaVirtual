@@ -93,6 +93,8 @@
   leerLocalStorage() {
     let productosLS;
     productosLS = this.obtenerProductosLocalStorage();
+    let cart = document.querySelector('.cart-icon span')
+    cart.innerHTML = productosLS.length
     productosLS.forEach(function (producto) {
       //Construir plantilla
       const row = document.createElement("tr");
