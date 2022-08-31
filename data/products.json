@@ -1,0 +1,156 @@
+{
+    "products": [{
+            "id": 1,
+            "title": "KIMISO",
+            "image": "./images/products/productos/1.jpg",
+            "price": 20,
+            "category": "Featured Products"
+        },
+
+        {
+            "id": 2,
+            "title": "CABLE SAMSUNG",
+            "image": "./images/products/productos/2.jpg",
+            "price": 2,
+            "category": "Special Products"
+        },
+        {
+            "id": 3,
+            "title": "CASE SAMSUNG",
+            "image": "./images/products/productos/3.jpg",
+            "price": 3,
+            "category": "Featured Products"
+        },
+        {
+            "id": 4,
+            "title": "CASE SAMSUNG",
+            "image": "./images/products/productos/4.jpg",
+            "price": 2,
+            "category": "Featured Products"
+        },
+        {
+            "id": 5,
+            "title": "BATERIA IPHONE XS",
+            "image": "./images/products/productos/5.jpg",
+            "price": 35,
+            "category": "Trending Products"
+        },
+
+        {
+            "id": 6,
+            "title": "CARGADOR IPHONE",
+            "image": "./images/products/productos/6.jpg",
+            "price": 15,
+            "category": "Special Products"
+        },
+
+
+        {
+            "id": 7,
+            "title": "CABLE USB VIDVIE",
+            "image": "./images/products/productos/7.jpg",
+            "price": 5,
+            "category": "Special Products"
+        },
+        {
+            "id": 8,
+            "title": "KIMISO KMS-M6",
+            "image": "./images/products/productos/8.jpg",
+            "price": 10,
+            "category": ""
+        },
+        {
+            "id": 9,
+            "title": "MICAS SAMSUNG",
+            "image": "./images/products/productos/9.jpg",
+            "price": 2,
+            "category": ""
+        },
+        {
+            "id": 10,
+            "title": "CARGADOR SAMSUNG",
+            "image": "./images/products/productos/10.jpg",
+            "price": 3,
+            "category": "Special Products"
+        },
+
+        {
+            "id": 12,
+            "title": "BATERIAS SAMSUNG A10S",
+            "image": "./images/products/productos/12.jpg",
+            "price": 20,
+            "category": "Trending Products"
+        },
+        {
+            "id": 13,
+            "title": "MICAS",
+            "image": "./images/products/productos/13.jpg",
+            "price": 2,
+            "category": ""
+        },
+        {
+            "id": 14,
+            "title": "CABLE USB REALME",
+            "image": "./images/products/productos/14.jpg",
+            "price": 3,
+            "category": "Special Products"
+        },
+        {
+            "id": 15,
+            "title": "CARGADOR SAMSUNG AUTO",
+            "image": "./images/products/productos/15.jpg",
+            "price": 3,
+            "category": "Special Products"
+        },
+        {
+            "id": 16,
+            "title": "BATERIA NOTE 8 PRO",
+            "image": "./images/products/productos/16.jpg",
+            "price": 15,
+            "category": "Trending Products"
+        },
+        {
+            "id": 17,
+            "title": "CASE SAMSUNG",
+            "image": "./images/products/productos/17.jpg",
+            "price": 3,
+            "category": "Featured Products"
+        },
+        {
+            "id": 18,
+            "title": "LLAVEROS",
+            "image": "./images/products/productos/18.jpg",
+            "price": 2,
+            "category": ""
+        },
+        {
+            "id": 19,
+            "title": "CASE SAMSUNG",
+            "image": "./images/products/productos/19.jpg",
+            "price": 2,
+            "category": "Featured Products"
+        },
+        {
+            "id": 20,
+            "title": "BATERIAS SAMSUNG J5",
+            "image": "./images/products/productos/20.jpg",
+            "price": 7,
+            "category": "Trending Products"
+        },
+        {
+            "id": 21,
+            "title": "CARGADOR SAMSUNG",
+            "image": "./images/products/productos/21.jpg",
+            "price": 7,
+            "category": "Special Products"
+        },
+        {
+            "id": 22,
+            "title": "PARLANTE STAR WARS",
+            "image": "./images/products/productos/22.jpg",
+            "price": 25,
+            "category": ""
+        }
+
+    ]
+}

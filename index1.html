@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+	<script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>LandCelL Shop</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="#">LANDCELL SHOP</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-secondary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Lista de Productos</h1>
+            <p class="lead">Selecciona uno de nuestros productos, puedes ver tu compra en el icono del carrito. Dando clic en el menu de la derecha.</p>
+        </div>
+
+        <div class="wrap">
+            <div class="store-wrapper">
+                <div class="category_list">
+                    <a href="#" class="category_item" category="all">Todo</a>
+                    <a href="#" class="category_item" category="baterias">Baterías</a>
+                    <a href="#" class="category_item" category="cargadores">Cargadores</a>
+                    <a href="#" class="category_item" category="parlantes">Parlantes</a>
+                    <a href="#" class="category_item" category="cable">Cables USB y más</a>
+                    <!-- <a href="#" class="category_item" category="audifonos">Audifonos</a> -->
+                </div>
+                <section class="products-list" id="lista-productos">
+
+                    <!-- #1 -->
+                    <div class="product-item" category="parlantes">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">ALTAVOZ PORTÁTIL</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/1.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">20</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li></li>
+                                <li><br></li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="1">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #2 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CABLE USB </h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/2.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">2</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li><br><br></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="2">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #3 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CASE</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/3.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">3</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <select name="" id="colores">
+                                    <option value="Rosa">Seleccione el color: </option>
+                                    <option value="Azul">Azul</option>
+                                    <option value="Verde">Verde</option> 
+                                </select>
+                            </ul><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="3">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #4 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CASE</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/4.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">2</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <select name="" id="colores">
+                                    <option value="Rosa">Seleccione el color: </option>
+                                    <option value="Blanco">Blanco</option>
+                                    <option value="Negro">Negro</option>
+                                </select>
+                            </ul><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="4">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #5 -->
+                    <div class="product-item" category="baterias">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">BATERÍAS IPHONE</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/5.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">35</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>MODELO XS</li>
+                                <li><br></li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="5">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #6 -->
+                    <div class="product-item" category="cargadores">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CARGADOR IPHONE</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/6.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">15</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li></li>
+                                <li>PARA TODO TIPO DE IPHONE</li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="6">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #7 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CABLE USB</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/7.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">5</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>TIPO MICRO USB </li>
+                                <li></li>
+                                <li>MODELO VIDVIE</li>
+                            </ul><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="7">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #8 -->
+                    <div class="product-item" category="parlantes">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">ALTAVOZ PORTÁTIL</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/8.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">10</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <select name="" id="colores">
+                                    <option value="Rosa">Seleccione el color: </option>
+                                    <option value="Rosa">Rosa</option>
+                                    <option value="Celeste">Celeste</option>
+                                    <option value="Negro">Negro</option>
+                                    <option value="Rojo">Rojo</option>
+                                    <option value="Café">Café</option>
+                                </select>
+                            </ul><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="8">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #9 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">MICAS SAMSUNG</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/9.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">2</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>TODO TIPO DE MODELOS</li>
+                                <li></li>
+                                <li></li>
+                                <li><br></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #10 -->
+                    <div class="product-item" category="cargadores">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CARGADOR SAMSUNG</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/10.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">3</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li><br></li>
+                                <li></li>
+                                <li></li>
+                            </ul><br><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #12 -->
+                    <div class="product-item" category="baterias">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">BATERÍAS SAMSUNG</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/12.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">20</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>MODELO A10S</li>
+                                <li></li>
+                                <li></li>
+                            </ul><br><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #13 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">MICAS SAMSUNG</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/13.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">2</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>TODO TIPO DE MODELOS</li>
+                                <li></li>
+                                <li></li>
+                            </ul><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #14 -->
+                    <div class="product-item" category="cable">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-bold">CABLE USB</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="img/14.jpg" class="card-img-top">
+                                <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">3</span></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li></li>
+                                    <li>MARCA: REALME</li>
+                                    <li>TIPO C</li>
+                                    <li></li>
+                                </ul><br>
+                                <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                            </div>
+                    </div>
+
+                    <!-- #15 -->
+                    <div class="product-item" category="cargadores">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CARGADOR PARA AUTO</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/15.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">3</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>MARCA SAMSUNG</li>
+                                <li>TIPO MICRO USB</li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #16 -->
+                    <div class="product-item" category="baterias">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">BATERÍAS XIAOMI</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/16.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">15</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>MODELO NOTE 8 PRO</li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #17 -->
+                    <div class="product-item" category="cable">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-bold">CASE</h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="img/17.jpg" class="card-img-top">
+                                <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">3</span></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li></li>
+                                    <li>VARIOS MODELOS</li>
+                                    <li></li>
+                                    <li></li>
+                                </ul><br><br>
+                                <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                            </div>
+                    </div>
+
+                    <!-- #18 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">LLAVEROS</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/18.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">2</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>VARIOS MODELOS</li>
+                                <li></li>
+                                <li></li>
+                            </ul><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #19 -->
+                    <div class="product-item" category="cable">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CASE</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/19.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">2</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>VARIOS MODELOS</li>
+                                <li></li>
+                                <li></li>
+                            </ul><br>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #20 -->
+                    <div class="product-item" category="baterias">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">BATERÍAS SAMSUNG</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/20.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">7</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>MODELO J5</li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #21 -->
+                    <div class="product-item" category="cargadores">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">CARGADOR SAMSUNG</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/21.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">7</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>CARGA RÁPIDA</li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+
+                    <!-- #22 -->
+                    <div class="product-item" category="parlantes">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">ALTAVOZ STAR WARS</h4>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/22.jpg" class="card-img-top">
+                            <h1 class="card-title pricing-card-title precio" style="text-align:center;">$ <span class="">25</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li></li>
+                                <li>COLOR BLANCO</li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <a href="" class="btn btn-block btn-danger agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        </div>
+        
+    </main>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+
+</body>
+
+</html>
