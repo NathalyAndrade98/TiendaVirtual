@@ -164,6 +164,11 @@ body{
 		margin-left: 0px;
 	}
 
+	#carrito {
+		max-height: calc(100vh - 200px);
+		overflow: auto;
+	}
+
 }
 
 @media screen and (max-width: 350px){
