@@ -19,42 +19,26 @@
       id: producto.querySelector("a").getAttribute("data-id"),
       cantidad: 1,
     };
-    let productosLS;
-    productosLS = this.obtenerProductosLocalStorage();
-    productosLS.forEach(function (productoLS) {
-      if (productoLS.id === infoProducto.id) {
-        productosLS = productoLS.id;
+    let productosLS = this.obtenerProductosLocalStorage();
+    productosLS.forEach(function (item) {
+      if (item.id === infoProducto.id) {
+        item.cantidad += 1;
+        infoProducto.cantidad += 1;
       }
     });
-
-    if (productosLS === infoProducto.id) {
-      Swal.fire({
-        type: "info",
-        title: "Oops...",
-        text: "El producto ya está agregado, puedes aumentar la cantidad en el procesar compra",
-        showConfirmButton: false,
-        timer: 1000,
-      });
-    } else {
-      this.insertarCarrito(infoProducto);
-    }
+    localStorage.setItem("productos", JSON.stringify(productosLS));
+    this.insertarCarrito(infoProducto);
   }
 
   //muestra producto seleccionado en carrito
   insertarCarrito(producto) {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-          <td>
-              <img src="${producto.imagen}" width=100>
-          </td>
-          <td>${producto.titulo}</td>
-          <td>${producto.precio}</td>
-          <td>
-              <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
-          </td>
-      `;
-    listaProductos.appendChild(row);
-    this.guardarProductosLocalStorage(producto);
+    let productosLS = this.obtenerProductosLocalStorage();
+    let contains = productosLS.filter(item => item.id == producto.id)
+    if (!contains.length) {
+      this.guardarProductosLocalStorage(producto);
+    }
+    listaProductos.innerHTML = '';
+    this.leerLocalStorage()
   }
 
   //Eliminar el producto del carrito en el DOM
@@ -117,6 +101,7 @@
                   <img src="${producto.imagen}" width=100>
               </td>
               <td>${producto.titulo}</td>
+              <td>${producto.cantidad}</td>
               <td>${producto.precio}</td>
               <td>
                   <a href="#" class="borrar-producto fas fa-times-circle" data-id="${producto.id}"></a>
@@ -137,6 +122,7 @@
                   <img src="${producto.imagen}" width=100>
               </td>
               <td>${producto.titulo}</td>
+              <td>${producto.cantidad}</td>
               <td>${producto.precio}</td>
               <td>
                   <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
